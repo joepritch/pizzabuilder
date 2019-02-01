@@ -18,43 +18,45 @@
       <div id="pizzaCustom" class="row">
         <div class="col-lg-6">
           <div id="pizzaIngredients" class="well">
-            <img class="crust" src="img/regularCrust.png" alt="Pepperoni">
-            <img class="crust" src="img/stuffedCrust.png" alt="Pepperoni">
-            <img class="sauce" src="img/redSauce.png" alt="Pepperoni">
-            <img class="sauce" src="img/whiteSauce.png" alt="Pepperoni">
-            <img class="cheese" src="img/cheese.png" alt="Pepperoni">
-            <img class="meat" src="img/pepperoni.png" alt="Pepperoni">
-            <img class="meat" src="img/ham.png" alt="Pepperoni">
-            <img class="veggies" src="img/pineapple.png" alt="Pepperoni">
-            <img class="veggies" src="img/jalepeno.png" alt="Pepperoni">
+            <img id="regCrust" src="img/regularCrust.png" alt="Regular Crust">
+            <img id="stuffedCrust" src="img/stuffedCrust.png" alt="Stuffed Crust">
+            <img id="redSauce" src="img/redSauce.png" alt="Red Sauce">
+            <img id="whiteSauce" src="img/whiteSauce.png" alt="White Sauce">
+            <img id="cheese" src="img/cheese.png" alt="Cheese">
+            <img id="meatPep" src="img/pepperoni.png" alt="Pepperoni">
+            <img id="meatHam" src="img/ham.png" alt="Ham">
+            <img id="veggiesPina" src="img/pineapple.png" alt="Pinapple">
+            <img id="veggiesJale" src="img/jalepeno.png" alt="Jalepeno">
           </div>
         </div>
         <div id="pizzaBuilder" class="col-lg-6">
           <div class="stepOne">
-            <h3>Choose a Crust</h3>
-            <button type="button" name="button">Regular Crust</button>
-            <button type="button" name="button">Stuffed Crust</button>
-            <button type="button" name="button">Next Step</button>
+            <h3>Regular or Stuffed</h3>
+            <p>Regular crust is $10, Stuffed is $12</p>
+            <button id="regCrustBtn" type="button" name="button">Regular Crust</button>
+            <button id="stuffedCrustBtn" type="button" name="button">Stuffed Crust</button>
           </div>
           <div class="stepTwo">
-            <h3>Choose a Sauce</h3>
-            <button type="button" name="button">Previous Step</button>
-            <button type="button" name="button">Red Sauce</button>
-            <button type="button" name="button">White Sauce</button>
-            <button type="button" name="button">Next Step</button>
+            <h3>Sauce and Cheese</h3>
+            <p>$1 Each, Maximum of one sauce</p>
+            <button id="redSauceBtn" type="button" name="button">Red Sauce</button>
+            <button id="whiteSauceBtn" type="button" name="button">White Sauce</button>
+            <button id="cheeseBtn" type="button" name="button">Cheese</button>
           </div>
           <div class="stepThree">
-            <h3>Choose a Meat</h3>
-            <button type="button" name="button">Previous Step</button>
-            <button type="button" name="button">Pepperoni</button>
-            <button type="button" name="button">Ham</button>
-            <button type="button" name="button">Next Step</button>
+            <h3>Add your Meats</h3>
+            <p>$2 Each</p>
+            <button id="meatPepBtn" type="button" name="button">Pepperoni</button>
+            <button id="meatHamBtn" type="button" name="button">Ham</button>
           </div>
           <div class="stepFour">
-            <h3>Choose a Veggie</h3>
-            <button type="button" name="button">Previous Step</button>
-            <button type="button" name="button">Pineapple</button>
-            <button type="button" name="button">Jalepeno</button>
+            <h3>Add your Veggies</h3>
+            <p>$3 Each</p>
+            <button id="veggiePinaBtn" type="button" name="button">Pineapple</button>
+            <button id="veggieJaleBtn" type="button" name="button">Jalepeno</button>
+          </div>
+          <div class="stepFive">
+            <h3>Calculate your Cost!</h3>
             <button id="pizzaDone" type="button" name="button">Done!</button>
           </div>
         </div>
