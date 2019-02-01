@@ -1,6 +1,6 @@
 .headbar {
   font-family: 'Shrikhand', cursive;
-  background-image: linear-gradient(lightgreen, green);
+  background-image: linear-gradient(red, darkred);
   height: 100px;
   color: white;
   text-align: center;
@@ -18,28 +18,27 @@ body {
   text-align: center;
   color: white;
   font-size: 40px;
-  text-shadow: 4px 4px 4px green;
+  text-shadow: 4px 4px 4px black;
 }
 h1 {
   margin-top: 0px;
 }
 img {
   position: absolute;
-  top: 0px;
-  left: 15px;
+  top: 35px;
+  left: 25px;
   width: 500px;
   height: 500px;
 }
 .well {
-  width: 500px;
-  height: 500px;
+  margin-top: 25px;
+  width: 520px;
+  height: 520px;
+  border-radius: 100%;
 }
 button {
   background-color: green;
   font-size: 20px;
-}
-#pizzaCustom {
-  display: none;
 }
 #priceTab {
   display: none;

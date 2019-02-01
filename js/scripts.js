@@ -30,10 +30,6 @@ Pizza.prototype.cost = function() {
 
 
 $(document).ready(function(){
-  $("#create").click(function(){
-    $("#menu").hide();
-    $("#pizzaCustom").show();
-  })
   $("#pizzaDone").click(function(){
     $("#pizzaBuilder").hide();
     $("#priceTab").show();
