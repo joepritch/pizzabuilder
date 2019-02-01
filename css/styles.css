@@ -6,7 +6,7 @@
   text-align: center;
   padding-top: 25px;
 }
-body  {
+body {
   background: repeating-linear-gradient(
   to right,
   #f6ba52,
@@ -14,8 +14,30 @@ body  {
   #ffd180 10px,
   #ffd180 20px
 );
-  font-family: 'Niconne', cursive;  
+  font-family: 'Niconne', cursive;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  text-shadow: 4px 4px 4px green;
 }
-h1  {
+h1 {
   margin-top: 0px;
+}
+img {
+  position: absolute;
+  top: 0px;
+  left: 15px;
+  width: 500px;
+  height: 500px;
+}
+.well {
+  width: 500px;
+  height: 500px;
+}
+button {
+  background-color: green;
+  font-size: 20px;
+}
+#priceTab {
+  display: none;
 }

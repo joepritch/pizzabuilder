@@ -5,3 +5,13 @@ function  Pizza(crust, sauce, cheese, meats, veggies){
   this.meats = meats;
   this.veggies = veggies;
 }
+
+
+$(document).ready(function(){
+  $("#pizzaDone").click(function(){
+    $("#pizzaBuilder").hide();
+    $("#priceTab").show();
+  })
+
+
+})
