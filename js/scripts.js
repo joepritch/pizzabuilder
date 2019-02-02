@@ -1,3 +1,4 @@
+//Pizza Business Logic
 function Pizza(crust, sauce, cheese, meats, veggies){
   this.crust = crust;
   this.sauce = sauce;
@@ -24,8 +25,8 @@ Pizza.prototype.cost = function() {
   return cost;
 }
 
+//UI Logic
 $(document).ready(function(){
-
 var crust = "reg";
 var sauce = "";
 var cheese = false;
@@ -79,7 +80,7 @@ var veggies = [];
     $("#meatPep").toggle();
     if ($("#meatPep").is(":hidden")) {
       var remove = meats.indexOf("pep");
-      meats.splice(remove);
+      meats.splice(remove,1);
     } else {
       meats.push("pep")
     }
@@ -89,7 +90,7 @@ var veggies = [];
     $("#meatHam").toggle();
     if ($("#meatHam").is(":hidden")) {
       var remove = meats.indexOf("ham");
-      meats.splice(remove);
+      meats.splice(remove,1);
     } else {
       meats.push("ham")
     }
@@ -99,7 +100,8 @@ var veggies = [];
     $("#veggiesPina").toggle();
     if ($("#veggiesPina").is(":hidden")) {
       var remove = veggies.indexOf("pina");
-      veggies.splice(remove);
+      veggies.splice(remove,1);
+      console.log(remove);
     } else {
       veggies.push("pina")
     }
@@ -109,7 +111,7 @@ var veggies = [];
     $("#veggiesJale").toggle();
     if ($("#veggiesJale").is(":hidden")) {
       var remove = veggies.indexOf("jale");
-      veggies.splice(remove);
+      veggies.splice(remove,1);
     } else {
       veggies.push("jale")
     }
@@ -120,7 +122,6 @@ var veggies = [];
     var myPizza = new Pizza(crust, sauce, cheese, meats, veggies);
     console.log(myPizza);
     var result = (myPizza.cost());
-    console.log(result);
     $("#result").text(result);
   })
 })
