@@ -6,11 +6,8 @@ function Pizza(crust, sauce, cheese, meats, veggies){
   this.veggies = veggies;
 }
 
-var myPizza = new Pizza("","",false, [], []);
-
 Pizza.prototype.cost = function() {
   var cost = 0;
-  console.log(cost)
   if (this.crust == "reg") {
   	cost += 10
   } else if (this.crust == "stuffed"){
@@ -24,29 +21,37 @@ Pizza.prototype.cost = function() {
   }
   cost += (2*(this.meats.length))
   cost += (3*(this.veggies.length))
-  console.log(cost)
+  return cost;
 }
 
-
-
 $(document).ready(function(){
+
+var crust = "reg";
+var sauce = "";
+var cheese = false;
+var meats = [];
+var veggies = [];
 
   $("#regCrustBtn").click(function(){
     $("#stuffedCrust").hide();
     $("#regCrust").show();
+    crust = "reg";
   })
 
   $("#stuffedCrustBtn").click(function(){
     $("#regCrust").hide();
     $("#stuffedCrust").show();
+    crust = "stuffed";
   })
 
   $("#redSauceBtn").click(function(){
     if ($("#redSauce").is(":hidden")) {
       $("#whiteSauce").hide();
       $("#redSauce").show();
-    } else if ($("#redSauce").is(":visible")) {
+      sauce = "red";
+    } else {
       $("#redSauce").hide();
+      sauce = "";
     }
   })
 
@@ -54,34 +59,68 @@ $(document).ready(function(){
     if ($("#whiteSauce").is(":hidden")) {
       $("#redSauce").hide();
       $("#whiteSauce").show();
-    } else if ($("#whiteSauce").is(":visible")) {
+      sauce = "white";
+    } else {
       $("#whiteSauce").hide();
+      sauce = "";
     }
   })
 
   $("#cheeseBtn").click(function(){
     $("#cheese").toggle();
+    if ($("#cheese").is(":hidden")) {
+      cheese = false;
+    } else {
+      cheese = true;
+    }
   })
 
   $("#meatPepBtn").click(function(){
     $("#meatPep").toggle();
+    if ($("#meatPep").is(":hidden")) {
+      var remove = meats.indexOf("pep");
+      meats.splice(remove);
+    } else {
+      meats.push("pep")
+    }
   })
 
   $("#meatHamBtn").click(function(){
     $("#meatHam").toggle();
+    if ($("#meatHam").is(":hidden")) {
+      var remove = meats.indexOf("ham");
+      meats.splice(remove);
+    } else {
+      meats.push("ham")
+    }
   })
 
   $("#veggiePinaBtn").click(function(){
     $("#veggiesPina").toggle();
+    if ($("#veggiesPina").is(":hidden")) {
+      var remove = veggies.indexOf("pina");
+      veggies.splice(remove);
+    } else {
+      veggies.push("pina")
+    }
   })
 
   $("#veggieJaleBtn").click(function(){
     $("#veggiesJale").toggle();
+    if ($("#veggiesJale").is(":hidden")) {
+      var remove = veggies.indexOf("jale");
+      veggies.splice(remove);
+    } else {
+      veggies.push("jale")
+    }
   })
 
   $("#pizzaDone").click(function(){
-    $("#pizzaBuilder").hide();
     $("#priceTab").show();
+    var myPizza = new Pizza(crust, sauce, cheese, meats, veggies);
+    console.log(myPizza);
+    var result = (myPizza.cost());
+    console.log(result);
+    $("#result").text(result);
   })
-
 })
